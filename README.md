@@ -11,6 +11,7 @@ python scaffold.py
 ## Steps
 
 - [x] **1.** to_log_returns
+- [x] **2.** rolling_zscore
 
 ---
 
