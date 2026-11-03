@@ -1,35 +1,27 @@
-"""
-Honest Backtesting: A Walk-Forward Signal Evaluator
+"""Compatibility imports for the original exercise; install the package first."""
 
-Assembled from your step-by-step solutions.
-"""
+from adversarial_backtester import (
+    audit_features,
+    backtest_report,
+    momentum_feature,
+    permutation_pvalue,
+    positions_from_predictions,
+    purged_walk_forward_splits,
+    rolling_zscore,
+    strategy_returns,
+    to_log_returns,
+    walk_forward_predict,
+)
 
-import numpy as np
-
-# Step 1 - to_log_returns
-import numpy as np 
-
-def to_log_returns(prices):
-    prices = np.array(prices)
-    log_returns = np.log(np.append(prices[1:], 1)) - np.log(prices)
-    return log_returns[:-1]
-
-# Step 2 - rolling_zscore
-import numpy as np
-
-def rolling_zscore(x, window):
-    n = len(x)
-    zscore = np.zeros(n)
-    for i in range(n):
-        if i < window - 1:
-            zscore[i] = np.nan
-            continue
-        i_window = x[i - window + 1:i+1]
-        i_window_std = np.std(i_window)
-        if i_window_std == 0:
-            zscore[i] = 0
-            continue
-        zscore[i] = (x[i] - np.mean(i_window)) / i_window_std
-    
-    return zscore
-
+__all__ = [
+    "audit_features",
+    "backtest_report",
+    "momentum_feature",
+    "permutation_pvalue",
+    "positions_from_predictions",
+    "purged_walk_forward_splits",
+    "rolling_zscore",
+    "strategy_returns",
+    "to_log_returns",
+    "walk_forward_predict",
+]
