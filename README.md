@@ -1,6 +1,6 @@
 # Adversarial Backtester
 
-A small, NumPy-based research engine for testing whether a single-asset return signal survives causal feature construction, chronological validation, turnover costs, and statistical scrutiny. It completes the original *Honest Backtesting: A Walk-Forward Signal Evaluator* exercise and separates its research logic into an installable Python package.
+A small, NumPy-based research engine for testing whether a single-asset return signal survives causal feature construction, chronological validation, turnover costs, and statistical scrutiny.
 
 The default model is ordinary least squares. The focus is the evaluation contract: when information becomes available, which observations may enter training, how predictions become returns, and what the reported statistics actually establish.
 
